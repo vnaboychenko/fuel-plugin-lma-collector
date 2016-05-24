@@ -18,7 +18,7 @@ notice('fuel-plugin-lma-collector: check_environment_configuration.pp')
 # plugin's configuration matches with the environment.
 
 $lma_collector = hiera_hash('lma_collector')
-$network_metadata = hiera('network_metadata')
+$network_metadata = hiera_hash('network_metadata')
 
 $elasticsearch_mode = $lma_collector['elasticsearch_mode']
 if $elasticsearch_mode == 'local' {
